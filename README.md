@@ -9,3 +9,7 @@ DATA SELECTION :
 - NOT TOO BIG DATA: we want enough samples, but the overall preprocessed compressed volume of data should not exceed 300 MB. Quantizing values to enough precision (but not to much) is recommended, as part of preprocessing.
 - BASELINE: You will need to provide baseline methods (easy simple learning machines) for the L2 students AND you will need to try to beat the state-of-the-art on this problem (for your report). Choose a problem that you understand well and for which there are publications you can read. For classification problems, shoot for problems with between ~80 and 90% accuracy. Problems outside this bracket are probably too easy or too hard. For regression problem, shoot for problems with an R2 between 0.75 and 0.95. Check for “data leakage” that is for features that inform inadvertently about the target values: running a feature selection algorithm often reveals such features.
 - TOPIC: Remain within the main topic of your team. If you find an interesting problem outside the topic of the team, ask the instructors whether it is OK to switch.
+
+
+
+Anciens projets : https://sites.google.com/a/chalearn.org/saclay/
