@@ -101,7 +101,7 @@ if __name__ == "__main__":
             solution = read_array(solution_file)
             prediction = read_array(predict_file)
             if (solution.shape != prediction.shape): raise ValueError(
-                "Bad prediction shape {}".format(prediction.shape))
+                "Set {} {}: Bad prediction shape {} instead of {}".format(set_num, predict_name.capitalize(), prediction.shape, solution.shape))
 
             if 1==1: #try:
                 # Compute the score prescribed by the metric file 

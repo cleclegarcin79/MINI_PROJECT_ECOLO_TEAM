@@ -8,7 +8,14 @@ https://www.kaggle.com/nelsonchu/air-quality-in-northern-taiwan
 Prerequisites:
 Install Anaconda Python 2.7, including jupyter-notebook
 
-Usage:
+Sanity check with sample data:
+
+`python ingestion_program/ingestion.py sample_data sample_result_submission ingestion_program sample_code_submission`
+
+`python scoring_program/score.py sample_data sample_result_submission scoring_output`
+
+
+Notebook:
 
 
 - The file README.ipynb contains step-by-step instructions on how to create a sample submission for the Iris challenge. At the prompt type:
@@ -16,10 +23,12 @@ jupyter-notebook README.ipynb
 
 - modify sample_code_submission to provide a better model
 
-- zip the contents of sample_code_submission (without the directory, but with metadata), or
+Prepare to submit:
 
 - download the public_data and run:
 
-  `python ingestion_program/ingestion.py public_data sample_result_submission ingestion_program sample_code_submission`
+`python ingestion_program/ingestion.py public_data sample_result_submission ingestion_program sample_code_submission`
 
-then zip the contents of sample_result_submission (without the directory).
+- zip the contents of sample_code_submission (without the directory, but with metadata) and submit to the challenge website.
+
+
