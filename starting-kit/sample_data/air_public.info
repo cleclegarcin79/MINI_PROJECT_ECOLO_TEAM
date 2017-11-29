@@ -1,5 +1,5 @@
 usage = 'Air Quality'
-name = 'air_pollution' 
+name = 'air' 
 task = 'regression'
 target_type = 'Numerical'
 feat_type = 'Numerical'
