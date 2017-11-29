@@ -40,10 +40,10 @@ def file_to_libsvm (filename, data_binary  , n_features):
         with open('tmp.txt', 'w') as f:
             for l in lines  :
                 tmp = l.strip().split()
-                f.write("0 ")
-                for i in range (len(tmp) ):
+                f.write(tmp[0]+" ")
+                for i in range (1,len(tmp)):
                     if(data_binary):
-                        f.write(tmp[i]+":1 ")
+                        f.write(str(i)+":"+tmp[i]+" ")
                     else:
                         f.write(tmp[i]+" ")
                 f.write("\n")
@@ -89,7 +89,7 @@ def convert_to_num(Ybin, verbose=True):
          return Ybin
 	classid=range(Ybin.shape[1])
 	Ycont = np.dot(Ybin, classid)
-	if verbose: print Ycont
+	if verbose: print (Ycont)
 	return Ycont
  
 def convert_to_bin(Ycont, nval, verbose=True):
