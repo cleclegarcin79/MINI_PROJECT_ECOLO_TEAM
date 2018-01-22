@@ -125,12 +125,12 @@ def vprint(mode, t):
 def write(filename, predictions):
     ''' Write prediction scores in prescribed format'''
     with open(filename, "w") as output_file:
-		for row in predictions:
-			if type(row) is not np.ndarray and type(row) is not list:
-				row = [row]
-			for val in row:
-				output_file.write('{0:g} '.format(float(val)))
-			output_file.write('\n')
+        for row in predictions:
+            if type(row) is not np.ndarray and type(row) is not list:
+                row = [row]
+            for val in row:
+                output_file.write('{0:g} '.format(float(val)))
+            output_file.write('\n')
 
 def zipdir(archivename, basedir):
     '''Zip directory, from J.F. Sebastian http://stackoverflow.com/'''
@@ -183,17 +183,17 @@ def check_dataset(dirname, name):
     ''' Check the test and valid files are in the directory, as well as the solution'''
     valid_file = os.path.join(dirname, name + '_valid.data')
     if not os.path.isfile(valid_file):
-		print('No validation file for ' + name)
-		exit(1)  
+        print('No validation file for ' + name)
+        exit(1)  
     test_file = os.path.join(dirname, name + '_test.data')
     if not os.path.isfile(test_file):
-		print('No test file for ' + name)
-		exit(1)
-	# Check the training labels are there
+        print('No test file for ' + name)
+        exit(1)
+    # Check the training labels are there
     training_solution = os.path.join(dirname, name + '_train.solution')
     if not os.path.isfile(training_solution):
-		print('No training labels for ' + name)
-		exit(1)
+        print('No training labels for ' + name)
+        exit(1)
     return True
 
 
