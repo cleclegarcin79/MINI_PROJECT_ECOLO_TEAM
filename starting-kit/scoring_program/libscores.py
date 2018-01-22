@@ -21,6 +21,7 @@
 # PUBLICATIONS, OR INFORMATION MADE AVAILABLE FOR THE CHALLENGE. 
 
 import os
+import sys
 from sys import stderr
 from sys import version
 
@@ -40,6 +41,9 @@ if (os.name == "nt"):
     filesep = '\\'
 else:
     filesep = '/'
+
+if sys.version_info >= (3, 0):
+    from functools import reduce
 
 
 # ========= Useful functions ==============

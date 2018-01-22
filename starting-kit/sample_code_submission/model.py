@@ -76,12 +76,12 @@ class model:
         return y
     
     def save(self, path="./"):
-        pickle.dump(self, open(path + '_model.pickle', "w"))
+        pickle.dump(self, open(path + '_model.pickle', "wb"))
 
     def load(self, path="./"):
         modelfile = path + '_model.pickle'
         if isfile(modelfile):
-            with open(modelfile) as f:
+            with open(modelfile, "rb") as f:
                 self = pickle.load(f)
             print("Model reloaded from: " + modelfile)
         return self
